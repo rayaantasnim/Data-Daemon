@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Data-Daemon : Automated Python Intelligence Daemon & Daily Telemetry
+      Pipeline
+    </title>
+
+    <!-- Global SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Data-Daemon is an automated Python intelligence daemon running a 24/7 background schedule loop to aggregate live weather, currency rates, and web-scraped literature into secure email digests."
+    />
+    <meta
+      name="keywords"
+      content="Data-Daemon, Python Daemon, OpenWeatherMap, CurrencyAPI, BeautifulSoup, SMTP SSL, Schedule, Automation"
+    />
+    <meta name="author" content="Rayaan Tasnim" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://github.com/rayaantasnim/Final-Project-Auto-Gmail"
+    />
+    <meta
+      property="og:title"
+      content="Data-Daemon | Automated Python Intelligence Daemon"
+    />
+    <meta
+      property="og:description"
+      content="Automated Python intelligence daemon aggregating multi-source telemetry and delivering encrypted daily email digests via SMTP SSL."
+    />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://github.com/rayaantasnim/Final-Project-Auto-Gmail"
+    />
+    <meta
+      name="twitter:title"
+      content="Data-Daemon | Automated Python Intelligence Daemon"
+    />
+    <meta
+      name="twitter:description"
+      content="Production-ready background schedule loop and multi-source telemetry engine contained within a single main.py script."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome v6 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GSAP & ScrollTrigger Plugin CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://github.io",
+            "url": "https://rayaantasnim.github.io/Data-Daemon",
+            "name": "Data-Daemon",
+            "description": "Automated Python Intelligence Daemon & Daily Telemetry Pipeline"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://github.io",
+            "url": "https://rayaantasnim.github.io/Data-Daemon",
+            "name": "Data-Daemon: Automated Python Intelligence & Multi-Source Telemetry Daemon",
+            "isPartOf": {
+              "@id": "https://github.io"
+            },
+            "mainEntity": {
+              "@type": "SoftwareApplication",
+              "name": "Data-Daemon",
+              "description": "An automated Python intelligence daemon engineered to execute continuous 24/7 background schedule loops from a standalone main.py script. It aggregates real-time meteorological telemetry, live currency exchange rates, and trending literature data, routing encrypted SMTP_SSL payloads over Port 465 with near-zero CPU overhead.",
+              "applicationCategory": "AutomationApplication, DeveloperApplication",
+              "operatingSystem": "Cross-platform (Python 3)",
+              "downloadUrl": "https://rayaantasnim.github.io/Data-Daemon",
+              "author": {
+                "@type": "Person",
+                "name": "Rayaan Tasnim"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "Project Data-Daemon"
+              },
+              "hasPart": [
+                {
+                  "@type": "SoftwareSourceCode",
+                  "name": "OpenWeatherMap Telemetry Engine",
+                  "description": "Ingests real-time meteorological metrics for Dhaka to drive dynamic behavioral comfort suggestions, evaluating cloudiness parameters and atmospheric thresholds to trigger tailored lifestyle alerts.",
+                  "programmingLanguage": "Python"
+                },
+                {
+                  "@type": "SoftwareSourceCode",
+                  "name": "CurrencyAPI Financial Exchange Gateway",
+                  "description": "Executes real-time financial telemetry requests targeting a USD base currency to capture global market fluctuations for BDT, EUR, and GBP.",
+                  "programmingLanguage": "Python"
+                },
+                {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Books to Scrape Web Harvesting Unit",
+                  "description": "Employs a custom web harvesting engine built with BeautifulSoup4 to parse target HTML markup nodes dynamically using precise CSS selectors.",
+                  "programmingLanguage": "Python"
+                },
+                {
+                  "@type": "SoftwareSourceCode",
+                  "name": "SMTP_SSL Secure Payload Transport Bridge",
+                  "description": "Constructs standardized MIME email messages using Python's native EmailMessage library and dispatches them securely over SMTP_SSL Port 465.",
+                  "programmingLanguage": "Python"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- STICKY NAVIGATION BAR -->
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#" class="brand-logo">
+          <span class="dot"></span> Data-Daemon
+        </a>
+
+        <!-- Pure CSS Hamburger Trigger -->
+        <button
+          class="hamburger"
+          id="hamburger-trigger"
+          aria-label="Toggle Navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- GSAP OVERLAY NAVIGATION CANVAS -->
+    <div class="nav-overlay" id="nav-overlay">
+      <button
+        class="close-btn"
+        id="close-trigger"
+        aria-label="Close Navigation"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h1 class="navbar-heading">Navigation Topology</h1>
+
+      <ul class="overlay-links">
+        <li><a href="#hero" class="nav-link">01. Architecture Overview</a></li>
+        <li>
+          <a href="#pipelines" class="nav-link">02. Integration Channels</a>
+        </li>
+        <li>
+          <a href="#characteristics" class="nav-link">03. Ten Engine Pillars</a>
+        </li>
+        <li>
+          <a href="#conclusion" class="nav-link">04. Synthesis & Repository</a>
+        </li>
+      </ul>
+
+      <a
+        href="https://github.com/rayaantasnim/Final-Project-Auto-Gmail"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+      >
+        <i class="fa-brands fa-github"></i> View GitHub Repository
+      </a>
+    </div>
+
+    <!-- HERO BANNER SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-block">
+          <div class="hero-badge">
+            <i class="fa-solid fa-bolt"></i> Automated 24/7 Intelligence Daemon
+          </div>
+          <h1>Automated Python Intelligence & Multi-Source Telemetry Daemon</h1>
+          <p>
+            Data-Daemon is an automated Python intelligence daemon engineered to
+            execute continuous 24/7 background schedule loops from a standalone
+            <code>main.py</code> script. By seamlessly aggregating real-time
+            meteorological telemetry from OpenWeatherMap, live currency exchange
+            rates from CurrencyAPI, and trending literature data via custom
+            BeautifulSoup4 web harvesting, the system compiles comprehensive
+            daily digests. These unified data streams are securely routed to
+            designated recipients via encrypted SMTP_SSL payload delivery over
+            Port 465, maintaining near zero CPU utilization overhead across
+            continuous long-term production deployments without requiring heavy
+            external infrastructure.
+          </p>
+          <div
+            style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem"
+          >
+            <a href="#pipelines" class="btn btn-primary">
+              Explore Core Pipelines <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a
+              href="https://github.com/rayaantasnim/Final-Project-Auto-Gmail"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              <i class="fa-brands fa-github"></i> Repository Access
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img
+            src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Software Architecture Blueprint"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PIPELINE ARCHITECTURES (VERTICAL LAYOUT) -->
+    <section class="pipeline-section" id="pipelines">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">System Design</span>
+          <h2>Four Core Integration Channels & Bridges</h2>
+          <p>
+            A unified single-script architecture integrating live external REST
+            APIs, web harvesting, and automated SMTP dispatch.
+          </p>
+        </div>
+
+        <div class="pipeline-cards">
+          <!-- CARD 01 -->
+          <div class="pipeline-card">
+            <div class="pipeline-content">
+              <span class="pipeline-number">CHANNEL 01</span>
+              <h3>OpenWeatherMap Telemetry Engine</h3>
+              <p>
+                Ingests real-time meteorological metrics for Dhaka to drive
+                dynamic behavioral comfort suggestions. The engine continuously
+                evaluates raw atmospheric parameters returned by the
+                OpenWeatherMap API, parsing cloudiness percentages
+                (clouds['all'] &gt; 70%) and searching condition strings for
+                precipitation keywords to automatically append immediate rain
+                warnings. Furthermore, relative humidity levels above 80 percent
+                and extreme temperature thresholds (&gt;30°C for heat alerts,
+                &lt;15°C for cold conditions) trigger tailored lifestyle
+                suggestions within the dynamic payload, transforming raw
+                environmental metrics into highly actionable daily intelligence
+                for end recipients.
+              </p>
+            </div>
+            <div class="pipeline-image">
+              <img
+                src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Flash Preprocessor Visual"
+              />
+            </div>
+          </div>
+
+          <!-- CARD 02 -->
+          <div class="pipeline-card">
+            <div class="pipeline-content">
+              <span class="pipeline-number">CHANNEL 02</span>
+              <h3>CurrencyAPI Financial Exchange Gateway</h3>
+              <p>
+                Executes real-time financial telemetry requests targeting a USD
+                base currency to capture global market fluctuations. The module
+                interfaces directly with CurrencyAPI's REST endpoints, parsing
+                inbound JSON responses to isolate key conversions for
+                Bangladeshi Taka (BDT), Euros (EUR), and British Pounds (GBP).
+                By extracting exact exchange rates and organizing them into
+                clean, human-readable summary blocks, this module delivers
+                crucial macroeconomic intelligence into the daily digest stream.
+                The entire ingestion lifecycle is wrapped in exception handling
+                mechanisms to ensure system resilience against external network
+                volatility.
+              </p>
+            </div>
+            <div class="pipeline-image">
+              <img
+                src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Execution Engine Logic"
+              />
+            </div>
+          </div>
+
+          <!-- CARD 03 -->
+          <div class="pipeline-card">
+            <div class="pipeline-content">
+              <span class="pipeline-number">CHANNEL 03</span>
+              <h3>Books to Scrape Web Harvesting Unit</h3>
+              <p>
+                Employs a custom web harvesting engine built with BeautifulSoup4
+                (bs4) and requests to parse target HTML markup nodes
+                dynamically. Operating directly on the Books to Scrape web
+                portal, the scraper traverses raw DOM nodes, applying precise
+                CSS selector queries to extract top trending literature titles
+                and corresponding pricing fields without relying on heavy
+                headless browser drivers. By maintaining an extremely
+                lightweight memory footprint, this harvesting pipeline extracts
+                curated literary summaries in milliseconds, seamlessly
+                converting unstructured web content into structured plain-text
+                sections ready for MIME package aggregation.
+              </p>
+            </div>
+            <div class="pipeline-image">
+              <img
+                src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Programmatic Settings Code"
+              />
+            </div>
+          </div>
+
+          <!-- CARD 04 -->
+          <div class="pipeline-card">
+            <div class="pipeline-content">
+              <span class="pipeline-number">CHANNEL 04</span>
+              <h3>SMTP_SSL Secure Payload Transport Bridge</h3>
+              <p>
+                Constructs standardized MIME email messages using Python's
+                native <code>email.message.EmailMessage</code> library and
+                dispatches them across secure channels. The bridge maps dynamic
+                plaintext bodies into structured envelope headers including
+                Subject, From, and To addresses. For physical transport, the
+                system connects directly over SMTP_SSL Port 465 via
+                <code>smtplib.SMTP_SSL</code>, establishing an encrypted TLS/SSL
+                session right from socket initialization. This zero-plaintext
+                setup effectively mitigates man-in-the-middle (MITM) credential
+                exposure risks while ensuring reliable daily delivery directly
+                into recipient inboxes.
+              </p>
+            </div>
+            <div class="pipeline-image">
+              <img
+                src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Security Terminal Gateway"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEN CHARACTERISTICS SECTIONS -->
+    <section class="characteristics-section" id="characteristics">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Deep Dive</span>
+          <h2>Ten Core Technical Characteristics</h2>
+          <p>
+            Architectural highlights detailing the background lifecycle, data
+            processing logic, and security mechanics of Data-Daemon.
+          </p>
+        </div>
+
+        <!-- ROW 01 -->
+        <div class="char-row">
+          <div class="char-text">
+            <div class="char-icon">
+              <i class="fa-solid fa-folder-minus"></i>
+            </div>
+            <h3>01. Standalone main.py Execution Architecture</h3>
+            <p>
+              Data-Daemon is completely encapsulated within a single core script
+              framework (<code>main.py</code>). By avoiding complex modular
+              directory trees, external package scaffolding, and deep relative
+              import dependencies, the application guarantees immediate
+              portability and zero-configuration setups across any system
+              running Python 3. Software engineers can inspect, audit, debug,
+              and deploy the entire automation engine from a singular file. This
+              monolithic script approach drastically reduces runtime deployment
+              bugs associated with missing nested packages, broken paths, or
+              fragmented configuration files, providing an enterprise-grade
+              automation engine with maximum operational simplicity.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Clean Code File Structure"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 02 -->
+        <div class="char-row reverse">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h3>02. Continuous 24/7 Thread Lifecycle Loop</h3>
+            <p>
+              The application acts as a non-blocking 24/7 background daemon
+              powered by Python's lightweight <code>schedule</code> framework.
+              Upon initialization, the core execution process registers the main
+              execution handler using
+              <code>schedule.every().day.at("08:00")</code> to establish precise
+              daily triggers. The main thread enters an infinite execution loop
+              (<code>while True</code>) that repeatedly invokes
+              <code>schedule.run_pending()</code>. This design eliminates the
+              need for external OS-level cron configurations or complex task
+              queue brokers, allowing the application to self-manage its timing
+              lifecycle autonomously across uninterrupted months of continuous
+              operation.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Runtime Configuration Matrix"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 03 -->
+        <div class="char-row">
+          <div class="char-text">
+            <div class="char-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>03. Near Zero CPU Core Utilization Overhead</h3>
+            <p>
+              To ensure that continuous background polling does not consume
+              excessive processor cycles or trigger thermal throttling on host
+              instances, the main execution loop embeds an explicit
+              <code>time.sleep(60)</code> delay between schedule evaluations.
+              This 60-second polling interval pauses thread execution at the OS
+              kernel level, dropping CPU core utilization down to virtually 0%
+              during idle phases. Despite sleeping, the daemon maintains exact
+              minute-level accuracy for its daily 08:00 AM dispatch trigger,
+              offering an ideal balance between low resource overhead and
+              reliable task execution.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Token Orchestration Network"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 04 -->
+        <div class="char-row reverse">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-filter"></i></div>
+            <h3>04. Meteorological Cloudiness & Rain Flagging Logic</h3>
+            <p>
+              The weather intelligence module applies specialized conditional
+              logic to raw OpenWeatherMap telemetry parameters for Dhaka. It
+              continuously evaluates the <code>clouds['all']</code> percentage
+              attribute, flagging overcast conditions whenever coverage exceeds
+              70%. Concurrently, the engine inspects weather condition text
+              strings for keywords like "rain", "drizzle", or "thunderstorm". If
+              detected, the pipeline automatically inserts immediate rain
+              warnings and umbrella reminders into the email payload, turning
+              standard numeric weather data into direct, context-aware user
+              guidance before individuals start their day.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Data Sanitization Process"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 05 -->
+        <div class="char-row">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>05. Atmospheric Comfort & Thermal Threshold Evaluation</h3>
+            <p>
+              Beyond simple temperature displays, Data-Daemon processes human
+              atmospheric comfort parameters by analyzing relative humidity and
+              thermal indices in tandem. Relative humidity levels exceeding 80%
+              automatically generate humidity alerts indicating muggy or
+              oppressive conditions. Furthermore, ambient temperature values are
+              continuously benchmarked against hardcoded comfort boundaries:
+              temperatures above 30°C output heat warnings recommending
+              hydration and cooling, while values below 15°C append cold weather
+              notifications. This dual-threshold evaluation delivers a
+              comprehensive daily bio-climatic report tailored specifically to
+              local Dhaka conditions.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Server Hardware Racks"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 06 -->
+        <div class="char-row reverse">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-route"></i></div>
+            <h3>06. Real-Time Base-USD Currency Rate Ingestion</h3>
+            <p>
+              Financial monitoring is handled by a specialized CurrencyAPI
+              client configured with a United States Dollar (USD) base anchor.
+              During each execution run, the engine fetches real-time market
+              conversion rates, selectively isolating target currencies
+              including Bangladeshi Taka (BDT), Euro (EUR), and British Pound
+              (GBP). The engine validates data types, handles floating-point
+              rounding for precise display, and structures the rates into a
+              clean visual digest. This real-time ingestion keeps users
+              instantly updated on international exchange fluctuations without
+              needing manual financial web queries.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Dynamic URL Routing Concept"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 07 -->
+        <div class="char-row">
+          <div class="char-text">
+            <div class="char-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>07. Resilient BeautifulSoup4 HTML Web Harvesting</h3>
+            <p>
+              Data-Daemon includes a custom web scraper that targets the Books
+              to Scrape platform using <code>beautifulsoup4</code> and HTTP
+              <code>requests</code>. The scraper parses the raw HTML document
+              tree, extracting book titles, star ratings, stock availability,
+              and price attributes. Built-in DOM traversal selectors handle
+              varying markup structures gracefully, guaranteeing that minor web
+              page modifications do not break the pipeline. Extracted data is
+              sanitized, filtered, and formatted into top-trending literature
+              summaries, giving recipients effortless daily reading
+              recommendations alongside environmental and financial telemetry.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Data Security Shield"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 08 -->
+        <div class="char-row reverse">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-desktop"></i></div>
+            <h3>08. Standardized EmailMessage MIME Structure Mapping</h3>
+            <p>
+              Payload formatting leverages Python's built-in
+              <code>email.message.EmailMessage</code> library, avoiding messy
+              string concatenations or unformatted plain text outputs. All
+              aggregated data blocks—weather analytics, currency rates, and book
+              recommendations—are compiled into a clean, standardized MIME body.
+              Standard envelope headers including <code>Subject</code>,
+              <code>From</code>, and <code>To</code> are dynamically populated
+              at runtime. This compliant MIME structure guarantees consistent
+              visual formatting across all modern desktop, web, and mobile email
+              clients without triggering spam filters or rendering artifacts.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Modern User Interface Dashboard"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 09 -->
+        <div class="char-row">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <h3>09. Encrypted Port 465 SMTP_SSL Transport Protocol</h3>
+            <p>
+              Security during payload transmission is ensured by connecting
+              exclusively through <code>smtplib.SMTP_SSL</code> over Port 465.
+              Unlike standard STARTTLS connections that upgrade plain text
+              sessions dynamically, <code>SMTP_SSL</code> establishes an
+              encrypted SSL/TLS tunnel directly from socket creation. This
+              prevents eavesdropping, credential sniffing, and man-in-the-middle
+              attacks on public or cloud networks. Authentication credentials
+              and payload contents remain encrypted from the local daemon
+              process all the way to destination mail server handshakes.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Data Stream Flow"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 10 -->
+        <div class="char-row reverse">
+          <div class="char-text">
+            <div class="char-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>10. Minimalist Production Dependency Stack</h3>
+            <p>
+              Data-Daemon achieves high operational reliability by relying
+              strictly on a minimal, highly optimized dependency stack:
+              <code>Python 3</code>, <code>requests</code>,
+              <code>beautifulsoup4</code>, <code>schedule</code>,
+              <code>smtplib</code>, and <code>email</code>. By eliminating heavy
+              third-party framework layers, ORMs, or database systems, the
+              daemon avoids dependency hell and security vulnerability
+              propagation. The result is a lightweight, super-fast background
+              service that boots in milliseconds, uses minimal RAM, and executes
+              predictably across both low-cost edge hardware and enterprise
+              cloud servers.
+            </p>
+          </div>
+          <div class="char-img">
+            <div class="char-img-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1181373/pexels-photo-1181373.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Database Storage Server"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSION SECTION -->
+    <section class="conclusion-section" id="conclusion">
+      <div class="container">
+        <div class="conclusion-box">
+          <div class="conclusion-text">
+            <h2>Redefining Automated Python Intelligence Daemons</h2>
+            <p>
+              Data-Daemon demonstrates how single-file software design can
+              orchestrate complex multi-source telemetry, live API ingestion,
+              HTML web harvesting, and encrypted SMTP email dispatch within a
+              unified, non-blocking Python process. By running continuous 24/7
+              background loops with near-zero CPU overhead, the application
+              delivers reliable, secure, and deeply customized daily
+              intelligence digests directly to recipient inboxes every morning.
+              Explore the complete source code, review architectural
+              documentation, and deploy your own autonomous telemetry daemon
+              today.
+            </p>
+            <div style="margin-top: 2rem">
+              <a
+                href="https://github.com/rayaantasnim/Final-Project-Auto-Gmail"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                <i class="fa-brands fa-github"></i> Access Repository on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="conclusion-img-wrapper">
+            <img
+              src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Engineering Team Collaboration"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINIMALISTIC FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p class="footer-author">Authorized by Rayaan Tasnim with precision</p>
+        <p>© Project Data-Daemon 2026; All rights reserved</p>
+        <span class="footer-brand-tag">Powered by Olympiad Edge</span>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVITY & GSAP SCROLLTRIGGER INTERACTION LAYER -->
+    <script src="script.js"></script>
+  </body>
+</html>
